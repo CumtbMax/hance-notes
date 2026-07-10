@@ -6,6 +6,7 @@
 - [x] 完成构建检查 → 验证：生产构建成功
 - [x] Sites 发布尝试 → 验证：部署成功，但公共访问被 Cloudflare 403 拦截
 - [x] 生成 GitHub Pages 静态产物 → 验证：`docs/` 可在 `/hance-notes/` 子路径加载
+- [x] 发布 GitHub Pages → 验证：未登录访问返回 HTTP 200，首页正文及 JS/CSS 均可加载
 
 ## Review
 
@@ -17,3 +18,4 @@
 - `npm test`、`npm run lint` 与独立的 `npm run build` 均已通过。
 - Sites 版本已部署，`chatgpt.site` 主域的 Cloudflare 安全策略导致外部访问返回 403，因此改用 GitHub Pages。
 - 新增独立 GitHub Pages 构建入口，直接复用现有页面组件与样式，产物位于 `docs/`，资源基址为 `/hance-notes/`。
+- 已公开发布至 https://cumtbmax.github.io/hance-notes/，通过命令行未登录请求与真实浏览器双重验证。
