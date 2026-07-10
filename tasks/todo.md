@@ -4,7 +4,8 @@
 - [x] 生成三种苹果风格首页方向 → 验证：同内容、同尺寸，可直接比较
 - [x] 根据选定方向完成首页与文章展示 → 验证：桌面和手机端均可阅读、导航可用
 - [x] 完成构建检查 → 验证：生产构建成功
-- [x] 私密发布站点 → 验证：线上地址可访问
+- [x] Sites 发布尝试 → 验证：部署成功，但公共访问被 Cloudflare 403 拦截
+- [x] 生成 GitHub Pages 静态产物 → 验证：`docs/` 可在 `/hance-notes/` 子路径加载
 
 ## Review
 
@@ -14,4 +15,5 @@
 - 已移除启动占位页、开发预览元数据、远程字体与占位页专用依赖。
 - 审阅后将精选内容明确标为文章预览，移除会暗示可点击的反馈，并提升小字号文字对比度。
 - `npm test`、`npm run lint` 与独立的 `npm run build` 均已通过。
-- 已完成私密发布，线上地址为 https://hance-notes.max-han.chatgpt.site。
+- Sites 版本已部署，`chatgpt.site` 主域的 Cloudflare 安全策略导致外部访问返回 403，因此改用 GitHub Pages。
+- 新增独立 GitHub Pages 构建入口，直接复用现有页面组件与样式，产物位于 `docs/`，资源基址为 `/hance-notes/`。
